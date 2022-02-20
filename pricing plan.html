@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plan</title>
+</head>
+<body>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  /* background-color: aqua; */
+  min-height: 100vh;
+  background: #5c539d;
+}
+.container h2{
+  color: #fff;
+  font-size: 32px;
+  padding:50px 0;
+  text-align: center;
+}
+.price-row{
+   width: 90%;
+   max-width: 1100px;
+   margin: auto;
+   display:grid;
+   /* background-color: black; */
+   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+   grid-gap:25px;  
+}
+.price-col{
+  background:#000000;
+  padding: 10% 15%;
+  border-radius: 10px;
+  color:#fff;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+}
+.price-col p{
+  font-size: 25px;
+}
+.price-col h3{
+font-size: 44px;
+margin:20px 0 50px;
+}
+.price-col h3 span{
+  font-size: 20px;
+}
+.price-col ul{
+  text-align: left;
+  margin: 20px 0;
+  /* color: rgb(255, 255, 255); */
+  list-style-type:none;
+}
+.price-col ul li{
+  color:#4a494e;
+  margin: 15px 0;
+}
+.price-col ul li::before{
+  content: '\2022';
+color:#e33058;
+font-weight:bolder;
+margin-right: 20px;
+}
+  </style>
+  <div class="container">
+    <h2>Simple pricing plan </h2>
+    <div class="price-row">
+      <div class="price-col">
+        <p>Starter</p>
+        <h3>19$ <span> / month</span> </h3>
+        <ul>
+          <li>1 Website</li>
+          <li>10 GB Disk Space</11> 
+          <li>Free Email Address</li>
+          <li>Basic Web Builder</li> 
+          <li>No SSL Certificate</li>
+          <li>Limited Support</li>
+          </ul>
+      </div>
+
+      <div class="price-col">
+        <p>Advanced</p>
+        <h3>19$ <span>/ month</span></h3>
+        <ul>
+          <li>2 Website</li>
+          <li>50 GB Disk Space</11> 
+          <li>Free Email Address</li>
+          <li>Basic Web Builder</li> 
+          <li>SSL Certificate</li>
+          <li>Limited Support</li>
+          </ul>
+      </div>
+
+      <div class="price-col">
+        <p>premium</p>
+        <h3>19$ <span>/ month</span></h3>
+        <ul>
+          <li>2 Website</li>
+          <li>100 GB Disk Space</11> 
+          <li>Free Email Address</li>
+          <li>Advanced  Web Builder</li> 
+          <li>SSL Certificate</li>
+          <li>Unlimited Support</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
