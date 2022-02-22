@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #2a2424;
+  padding: 120px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.container:hover{
+    transition: 1s ease-out;
+    transform: translateY(-30px);
+}
+.container::before{
+    content: "";
+    position: absolute;
+     height:440px;
+    width: 50px; 
+    background:linear-gradient(#52cf32,#e7ac09);
+    animation: border-animate 5s linear infinite;
+}
+.container::after{
+    content: "";
+    position: absolute;
+    background-color: #2a2424;
+    inset:4px;
+    border-radius: 13px;
+}
+@keyframes border-animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+  </style>
+  <div class="container"></div>
+</body>
+</html>
