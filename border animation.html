@@ -7,55 +7,39 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- <script>
+    alert("hello");
+  </script> -->
   <style>
     body{
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+      background: black;
+      color:white;
     }
-    *{
-      margin: 0;
-      padding: 0;
-    }
-.container {
-  display: flex;
-  align-items: center;
-  background-color: #2a2424;
-  padding: 120px;
-  border-radius: 1rem;
-  position: relative;
-  overflow: hidden;
+.border-animation{
+display:inline-block;
+padding-bottom: 5px;
+position: relative;
 }
-.container:hover{
-    transition: 1s ease-out;
-    transform: translateY(-30px);
+.border-animation::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height:2px;  
+  bottom: 0;
+  transition: width 0.25s ease-out;
+  background-color: green;
 }
-.container::before{
-    content: "";
-    position: absolute;
-     height:440px;
-    width: 50px; 
-    background:linear-gradient(#52cf32,#e7ac09);
-    animation: border-animate 5s linear infinite;
+.border-animation:hover::before{
+  width:100%;
 }
-.container::after{
-    content: "";
-    position: absolute;
-    background-color: #2a2424;
-    inset:4px;
-    border-radius: 13px;
-}
-@keyframes border-animate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+#code-btn{
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid green;
 }
   </style>
-  <div class="container"></div>
+  <h2 class="border-animation"> Hey what's happening</h2>
 </body>
 </html>
