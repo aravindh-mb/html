@@ -4,42 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cursor animation-webdevfrontend</title>
 </head>
 <body>
-    <div class="border2"></div>
     <style>
-        .border2{
-           top: 50%;
-           left: 45%;
-            margin: auto;
-        }
-    .border2{
+.cursor{
     position: absolute;
     height: 25px;
     width: 4px;
-    background-color: rgb(0, 0, 0);
-    margin: 0 20px 89px 60px;
+    background-color: black;
+    margin: 0 20px 90px 60px;
     animation: cursor 0.8s linear infinite;
 }
-@keyframes cursor {
-    0%{
+@keyframes cursor{
+    0%,10%,100%{
         opacity: 0;
     }
-    10%{
-        opacity: 0;
-    }
-    50%{
+    50%,70%{
         opacity: 1;
-    }
-    55%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
     }
 }
-
     </style>
+    <div class="cursor">
+
+    </div>
 </body>
 </html>
