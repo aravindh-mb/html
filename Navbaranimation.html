@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="active">home</li>
+        <li>price</li>
+        <li>menu</li>
+        <li>contact </li>
+        <div class="bottom"></div>
+    </ul>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }  
+      body{
+          background: rgb(37, 37,37);
+          font-family: sans-serif; 
+      }
+ul{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+     transform: translate(-50%,-50%);
+     background: rgb(46, 46,46);
+     width: 450px;
+     height: 70px;
+     border-radius: 10px;
+     box-shadow: 5px 5px 20px rgba(0,0,0,0.5 );
+     display: flex;
+}
+ul li{
+    line-height: 70px;
+    width: 100px;
+    text-transform: capitalize;
+    color: aliceblue;
+    text-align: center;
+    /* align-items: center; */
+    list-style: none;
+    font-size: 20px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+li:hover,#active{
+    color: rgb(9, 175, 134);
+}
+.bottom{
+    position: absolute;
+    background: rgb(0, 0, 0);
+    height: 4px;
+    width: 80px;
+    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    left: 10px;
+    transition: 0.3s ease-in-out;
+    display: none;
+
+} 
+li:nth-child(1):hover ~ .bottom{
+    left:6px;
+    display: block;
+}
+li:nth-child(2):hover ~ .bottom{
+    left:110px;
+    display: block;
+
+}li:nth-child(3):hover ~ .bottom{
+    left:210px;
+    display: block;
+
+}li:nth-child(4):hover ~ .bottom{
+    left:310px;
+    display: block;
+}
+
+
+    </style>
+</body>
+</html>
