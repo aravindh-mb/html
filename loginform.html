@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="theme-color" content="#3eeec2">
+</head>
+<body>
+<div class="container">
+    <div class="square">
+        <div class="box1 shape"></div>
+        <div class="box2 shape"></div>
+        <div class="box3 shape"></div>
+        <div class="box4 shape"></div>
+        <div class="box5 shape"></div>
+    </div>
+        <h2 class="title ">Login</h2><br>
+    
+    <form>
+        <input id="user__name" type="text" autocomplete="off" placeholder="Username"><br>
+        <input type="password"  id="user__password" placeholder="Password">
+    </form>
+</div>
+<script>
+    let user_name = document.getElementById('user__name');
+    let user_password = document.getElementById('user__password');
+    let user__name__value= user_name.value;
+    console.log(user__name__value);
+    let lsv=localStorage.setItem('username',`aravindh`);
+    let lsp=localStorage.setItem('userpassword',`qxty46536g`);
+console.log(lsv);
+let confrm = confirm("Auto fill with local Storage data")
+if(confrm==true){
+   set();
+}
+function set(){
+    setTimeout(() => {
+    let q = user_name.value=localStorage.getItem('username');
+    q.style.transition='0.9s';
+}, 2000);
+setTimeout(() => {
+    let a= user_password.value=localStorage.getItem('userpassword');
+
+    a.style.transition='0.9s';
+}, 2500);
+}
+</script>
+<style>
+
+    :root{
+        --bg:url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=60');
+        --bgheight:97vh;
+        --con-bg:rgb(255, 255, 255);
+    }
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background:var(--bg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: var(--bgheight);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+    }
+    .square .shape{
+        width: 50px;
+        height: 10px;
+        border-radius: 5px;
+        margin: 2px;
+        position: relative;
+    }
+    .square .box1{
+        width: 50px;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.3;
+        backdrop-filter: blur(10px);
+        top:-30px;
+        position: absolute;
+        z-index: -2;
+        animation: animate 8s linear infinite;
+
+    }
+    .square .box2{
+        width:70px;
+        height: 70px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.2;
+        backdrop-filter: blur(10px);
+        right:-50px;
+        position: absolute;
+        z-index:-2;
+        transform: rotate(-30deg);
+        animation: animate 20s linear infinite;
+    }
+    .square .box3{
+        width: 80px;
+        height: 80px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.2;
+        backdrop-filter: blur(10px);
+        bottom:-30px;
+        position: absolute;
+        z-index: -2;
+        transform: rotate(100deg);
+        animation: animate 14s linear infinite;
+    }
+       @keyframes animate{
+           form{
+               top:2px;
+               transform: rotate(280deg);
+           }
+           to{
+            transform: rotate(360deg);
+           }
+       }
+    .container{
+        height: 300px;
+        width: 350px;
+        backdrop-filter: blur(40px);
+        border-radius: 1rem;
+        color: rgb(0, 0, 0);
+        box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .container h2{
+        text-align: center;
+    }
+    .container input{
+        display: block;
+        margin: 10px 60px  ;
+        width: 200px;
+        height: 30px;
+        border: none;
+        appearance: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid black; 
+    }
+ ::-webkit-input-placeholder{
+     color:green; 
+ }
+</style>
+
+
+
+
+</body>
+</html>
