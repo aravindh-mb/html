@@ -13,11 +13,8 @@
         <div class="box1 shape"></div>
         <div class="box2 shape"></div>
         <div class="box3 shape"></div>
-        <div class="box4 shape"></div>
-        <div class="box5 shape"></div>
     </div>
         <h2 class="title ">Login</h2><br>
-    
     <form>
         <input id="user__name" type="text" autocomplete="off" placeholder="Username"><br>
         <input type="password"  id="user__password" placeholder="Password">
@@ -26,8 +23,6 @@
 <script>
     let user_name = document.getElementById('user__name');
     let user_password = document.getElementById('user__password');
-    let user__name__value= user_name.value;
-    console.log(user__name__value);
     let lsv=localStorage.setItem('username',`aravindh`);
     let lsp=localStorage.setItem('userpassword',`qxty46536g`);
 console.log(lsv);
@@ -38,12 +33,9 @@ if(confrm==true){
 function set(){
     setTimeout(() => {
     let q = user_name.value=localStorage.getItem('username');
-    q.style.transition='0.9s';
 }, 2000);
 setTimeout(() => {
     let a= user_password.value=localStorage.getItem('userpassword');
-
-    a.style.transition='0.9s';
 }, 2500);
 }
 </script>
@@ -143,9 +135,5 @@ setTimeout(() => {
      color:green; 
  }
 </style>
-
-
-
-
 </body>
 </html>
