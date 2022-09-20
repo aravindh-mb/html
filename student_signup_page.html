@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation using js</title>
+</head>
+<body>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+  background:linear-gradient(to right,dodgerBlue,rgb(51, 185, 229));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+h2{
+    margin-bottom:5px;
+}
+.form-container,.form{
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background:linear-gradient(to left , rgb(49, 47, 42),rgb(0, 0, 0));
+    width:350px;
+    border-radius:10px;
+}
+.form-container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin-top:4%;
+    height:auto;
+}
+.details{
+    display:grid;
+    place-content: center;
+    width:40px;
+}
+.gender{
+    display:flex;
+    justify-content: space-evenly;
+}
+span{
+    margin-top:5px;
+}
+input,select{
+    accent-color: rgb(252, 146, 24);
+    border: transparent;
+    margin:8px;
+    border:none;
+    outline:none;
+    padding:10px;
+    border-radius:5px;
+    color:orange;
+}
+p{
+    float:left;
+}
+#username,#email,#password,#dob,#Mobile,#date{
+    width:280px;
+}
+input[type=submit]{
+    background-color:orange;
+    color:white;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:600;
+    cursor: pointer;
+    margin-top:30px;
+}
+
+    </style>
+    <div class="form-container">
+        <form  class="form">
+            <div class="details">
+        <h2 style="color:orange;margin-top: 8px;">Student info</h2>
+            <input type="text"   id="username" placeholder="Username">
+            <input type="email"  id="email">
+            <input type="password"  id="password" placeholder="password">
+            <p>Date</p>
+            <input type="text" placeholder="DOB"  id="dob" onfocus="(this.type='date')">
+            <input type="number"  id="mobile" placeholder="Mobile">
+            <input type="number" id="rigisterno" placeholder="Rigisterno">
+            <p>Select Department</p>
+            <select id="department">
+                <option value="">--select--</option>
+                <option value="cse">CSE</option>
+                <option value="eee">EEE</option>
+                <option value="mech">MECH</option>
+                <option value="ece">ECE</option>
+            </select>
+            <p>Select Batch</p>
+            <select id="batch">
+                <option value="">--select--</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2010">2021</option>
+                <option value="2022">2022</option>
+            </select>
+            <input type="submit" value="submit" id="submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let username =document.getElementById('username')
+let email =document.getElementById('email')
+let password =document.getElementById('password')
+let dob =document.getElementById('dob')
+let mobile =document.getElementById('mobile')
+let department = document.getElementById('department')
+let batch = document.getElementById('batch')
+
+let submit = document.getElementById('submit')
+
+submit.addEventListener('click', (event)=>{
+    event.preventDefault();
+alert(`
+    Email : ${email.value}
+    password :${password.value}  
+    dob :${dob.value}
+    mobile :${mobile.value}
+    department :${department.value}
+    batch :${batch.value}
+
+`);
+});
+    </script>
+</body>
+</html>
